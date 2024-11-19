@@ -5,6 +5,9 @@ from libs.exportkml import kmlclass
 from scipy.ndimage import convolve
 from enum import Enum
 
+import json
+from datetime import datetime
+
 class PathStateEnum(Enum):
     NONE=0
     PANDAS_FRAME=1
@@ -160,3 +163,140 @@ class PathManagement():
                 kml.pt(self.currentPath[i,1],self.currentPath[i,2],self.currentPath[i,3])
         kml.trksegend()
         kml.end()
+    def ExportQGCPlan(self, filename):
+        """
+        Export current path as QGC mission plan
+        """
+        exporter = QGCRouteExporter(self)
+        exporter.export_route_plan(filename)
+
+
+class QGCRouteExporter:
+    def __init__(self, path_management):
+        """
+        Initialize with a PathManagement instance to access its path data
+        """
+        self.path_management = path_management
+        self.mission_items = []
+        self.current_item_seq = 0
+    
+    def create_waypoint(self, lat, lon, alt, holdTime=0):
+        """Creates a waypoint mission item for QGC"""
+        waypoint = {
+            "autoContinue": True,
+            "command": 16,  # MAV_CMD_NAV_WAYPOINT
+            "doJumpId": self.current_item_seq + 1,
+            "frame": 3,     # MAV_FRAME_GLOBAL_RELATIVE_ALT
+            "params": [
+                holdTime,   # Hold time in seconds
+                1.0,       # Acceptance radius in meters
+                0.0,       # Pass through waypoint
+                float('nan'),  # Desired yaw angle
+                lat,       # Latitude
+                lon,       # Longitude
+                alt        # Altitude
+            ],
+            "type": "SimpleItem"
+        }
+        return waypoint
+
+    def export_route_plan(self, filename):
+        """
+        Exports route plan in QGC format using the PathManagement's currentPath
+        filename: output json file path
+        """
+        if self.path_management.currentPathState != self.path_management.PathStateEnum.LAT_LONG_PATH:
+            raise Exception("Path must be in LAT_LONG_PATH state. Call ConvertToGeodedic() first.")
+
+        path_data = self.path_management.currentPath
+
+        # Create mission plan structure
+        mission_plan = {
+            "fileType": "Plan",
+            "geoFence": {
+                "circles": [],
+                "polygons": [],
+                "version": 2
+            },
+            "groundStation": "QGroundControl",
+            "mission": {
+                "cruiseSpeed": 15,
+                "firmwareType": 12,  # PX4 firmware
+                "hoverSpeed": 5,
+                "items": [],
+                "plannedHomePosition": None,
+                "vehicleType": 2,    # Multi-rotor
+                "version": 2
+            },
+            "rallyPoints": {
+                "points": [],
+                "version": 2
+            },
+            "version": 1
+        }
+
+        # Set home position from first coordinate
+        if len(path_data) > 0:
+            mission_plan["mission"]["plannedHomePosition"] = [
+                float(path_data[0][1]),  # lat
+                float(path_data[0][2]),  # lon
+                float(path_data[0][3])   # alt
+            ]
+
+        # Add takeoff command as first item
+        takeoff_item = {
+            "autoContinue": True,
+            "command": 22,  # MAV_CMD_NAV_TAKEOFF
+            "doJumpId": 1,
+            "frame": 3,
+            "params": [
+                float('nan'),  # Pitch angle
+                float('nan'),  # Empty
+                float('nan'),  # Empty
+                float('nan'),  # Yaw angle
+                float(path_data[0][1]),  # Latitude
+                float(path_data[0][2]),  # Longitude
+                30.0  # Altitude
+            ],
+            "type": "SimpleItem"
+        }
+        mission_plan["mission"]["items"].append(takeoff_item)
+        self.current_item_seq += 1
+
+        # Add waypoints
+        for i in range(len(path_data)):
+            waypoint = self.create_waypoint(
+                float(path_data[i][1]),  # lat
+                float(path_data[i][2]),  # lon
+                float(path_data[i][3])   # alt
+            )
+            mission_plan["mission"]["items"].append(waypoint)
+            self.current_item_seq += 1
+
+        # Add RTL (Return To Launch) as final item
+        rtl_item = {
+            "autoContinue": True,
+            "command": 20,  # MAV_CMD_NAV_RETURN_TO_LAUNCH
+            "doJumpId": self.current_item_seq + 1,
+            "frame": 3,
+            "params": [
+                0, 0, 0, float('nan'),  # Empty params
+                0, 0, 0                 # Empty params
+            ],
+            "type": "SimpleItem"
+        }
+        mission_plan["mission"]["items"].append(rtl_item)
+
+        # Write to file
+        with open(filename, 'w') as f:
+            json.dump(mission_plan, f, indent=4)
+            
+def ExportQGCPlan(self, filename):
+    """
+    Export current path as QGC mission plan
+    """
+    exporter = QGCRouteExporter(self)
+    exporter.export_route_plan(filename)
+
+# Add the method to PathManagement class
+PathManagement.ExportQGCPlan = ExportQGCPlan
