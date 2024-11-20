@@ -2,7 +2,6 @@ import pandas as pd
 import numpy as np
 from libs.utm import utmconv
 from libs.exportkml import kmlclass
-from scipy.ndimage import convolve
 from enum import Enum
 
 import json
@@ -139,10 +138,10 @@ class PathManagement():
             uv=utmconv()
             #convert back to lat long
             latLongPath=list()
-            meanAlt=self.currentPath[:,3].mean()
+            #meanAlt=self.currentPath[:,3].mean()
             for i in range(len(self.currentPath)):
                 (lat,long)=uv.utm_to_geodetic(self.hemisphere,self.UTMZone,self.currentPath[i,1],self.currentPath[i,2])
-                latLongPath.append((self.currentPath[i,0],lat,long,meanAlt))#self.currentPath[i,3]))
+                latLongPath.append((self.currentPath[i,0],lat,long,self.currentPath[i,3]))#self.currentPath[i,3]))
             self.currentPath=np.array(latLongPath)
             self.currentPathState=PathStateEnum.LAT_LONG_PATH
         elif self.currentPathState == PathStateEnum.PANDAS_FRAME:
@@ -163,20 +162,24 @@ class PathManagement():
                 kml.pt(self.currentPath[i,1],self.currentPath[i,2],self.currentPath[i,3])
         kml.trksegend()
         kml.end()
+
     def ExportQGCPlan(self, filename):
         """
         Export current path as QGC mission plan
         """
-        exporter = QGCRouteExporter(self)
+        if self.currentPathState != PathStateEnum.LAT_LONG_PATH:
+            raise Exception("Path must be in LAT_LONG_PATH state. Call ConvertToGeodedic() first.")
+        
+        exporter = QGCRouteExporter(self.currentPath)
         exporter.export_route_plan(filename)
 
 
 class QGCRouteExporter:
-    def __init__(self, path_management):
+    def __init__(self, path):
         """
-        Initialize with a PathManagement instance to access its path data
+        Initialize with a Lat_Long Path!
         """
-        self.path_management = path_management
+        self.path=path
         self.mission_items = []
         self.current_item_seq = 0
     
@@ -191,7 +194,7 @@ class QGCRouteExporter:
                 holdTime,   # Hold time in seconds
                 1.0,       # Acceptance radius in meters
                 0.0,       # Pass through waypoint
-                float('nan'),  # Desired yaw angle
+                None,  # Desired yaw angle
                 lat,       # Latitude
                 lon,       # Longitude
                 alt        # Altitude
@@ -205,10 +208,6 @@ class QGCRouteExporter:
         Exports route plan in QGC format using the PathManagement's currentPath
         filename: output json file path
         """
-        if self.path_management.currentPathState != self.path_management.PathStateEnum.LAT_LONG_PATH:
-            raise Exception("Path must be in LAT_LONG_PATH state. Call ConvertToGeodedic() first.")
-
-        path_data = self.path_management.currentPath
 
         # Create mission plan structure
         mission_plan = {
@@ -236,11 +235,11 @@ class QGCRouteExporter:
         }
 
         # Set home position from first coordinate
-        if len(path_data) > 0:
+        if len(self.path) > 0:
             mission_plan["mission"]["plannedHomePosition"] = [
-                float(path_data[0][1]),  # lat
-                float(path_data[0][2]),  # lon
-                float(path_data[0][3])   # alt
+                float(self.path[0][1]),  # lat
+                float(self.path[0][2]),  # lon
+                float(self.path[0][3])   # alt
             ]
 
         # Add takeoff command as first item
@@ -250,13 +249,13 @@ class QGCRouteExporter:
             "doJumpId": 1,
             "frame": 3,
             "params": [
-                float('nan'),  # Pitch angle
-                float('nan'),  # Empty
-                float('nan'),  # Empty
-                float('nan'),  # Yaw angle
-                float(path_data[0][1]),  # Latitude
-                float(path_data[0][2]),  # Longitude
-                30.0  # Altitude
+                float(0),  # Pitch angle
+                float(0),  # Empty
+                float(0),  # Empty
+                None,  # Yaw angle
+                float(self.path[0][1]),  # Latitude
+                float(self.path[0][2]),  # Longitude
+                float(self.path[0][3])
             ],
             "type": "SimpleItem"
         }
@@ -264,11 +263,11 @@ class QGCRouteExporter:
         self.current_item_seq += 1
 
         # Add waypoints
-        for i in range(len(path_data)):
+        for i in range(len(self.path)):
             waypoint = self.create_waypoint(
-                float(path_data[i][1]),  # lat
-                float(path_data[i][2]),  # lon
-                float(path_data[i][3])   # alt
+                float(self.path[i][1]),  # lat
+                float(self.path[i][2]),  # lon
+                float(self.path[i][3])   # alt
             )
             mission_plan["mission"]["items"].append(waypoint)
             self.current_item_seq += 1
@@ -280,7 +279,7 @@ class QGCRouteExporter:
             "doJumpId": self.current_item_seq + 1,
             "frame": 3,
             "params": [
-                0, 0, 0, float('nan'),  # Empty params
+                0, 0, 0, None,  # Empty params
                 0, 0, 0                 # Empty params
             ],
             "type": "SimpleItem"
@@ -299,4 +298,4 @@ def ExportQGCPlan(self, filename):
     exporter.export_route_plan(filename)
 
 # Add the method to PathManagement class
-PathManagement.ExportQGCPlan = ExportQGCPlan
+#PathManagement.ExportQGCPlan = ExportQGCPlan
