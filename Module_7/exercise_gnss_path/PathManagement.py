@@ -2,6 +2,7 @@ import pandas as pd
 import numpy as np
 from libs.utm import utmconv
 from libs.exportkml import kmlclass
+from scipy.ndimage import convolve
 from enum import Enum
 
 import json
@@ -138,10 +139,10 @@ class PathManagement():
             uv=utmconv()
             #convert back to lat long
             latLongPath=list()
-            #meanAlt=self.currentPath[:,3].mean()
+            meanAlt=self.currentPath[:,3].mean()
             for i in range(len(self.currentPath)):
                 (lat,long)=uv.utm_to_geodetic(self.hemisphere,self.UTMZone,self.currentPath[i,1],self.currentPath[i,2])
-                latLongPath.append((self.currentPath[i,0],lat,long,self.currentPath[i,3]))#self.currentPath[i,3]))
+                latLongPath.append((self.currentPath[i,0],lat,long,meanAlt))#self.currentPath[i,3]))
             self.currentPath=np.array(latLongPath)
             self.currentPathState=PathStateEnum.LAT_LONG_PATH
         elif self.currentPathState == PathStateEnum.PANDAS_FRAME:
@@ -167,7 +168,7 @@ class PathManagement():
         """
         Export current path as QGC mission plan
         """
-        if self.currentPathState != PathStateEnum.LAT_LONG_PATH:
+        if self.path_management.currentPathState != PathStateEnum.LAT_LONG_PATH:
             raise Exception("Path must be in LAT_LONG_PATH state. Call ConvertToGeodedic() first.")
         
         exporter = QGCRouteExporter(self.currentPath)
@@ -194,7 +195,7 @@ class QGCRouteExporter:
                 holdTime,   # Hold time in seconds
                 1.0,       # Acceptance radius in meters
                 0.0,       # Pass through waypoint
-                None,  # Desired yaw angle
+                float('nan'),  # Desired yaw angle
                 lat,       # Latitude
                 lon,       # Longitude
                 alt        # Altitude
@@ -249,13 +250,13 @@ class QGCRouteExporter:
             "doJumpId": 1,
             "frame": 3,
             "params": [
-                float(0),  # Pitch angle
-                float(0),  # Empty
-                float(0),  # Empty
-                None,  # Yaw angle
+                float('nan'),  # Pitch angle
+                float('nan'),  # Empty
+                float('nan'),  # Empty
+                float('nan'),  # Yaw angle
                 float(self.path[0][1]),  # Latitude
                 float(self.path[0][2]),  # Longitude
-                float(self.path[0][3])
+                30.0  # Altitude
             ],
             "type": "SimpleItem"
         }
@@ -279,7 +280,7 @@ class QGCRouteExporter:
             "doJumpId": self.current_item_seq + 1,
             "frame": 3,
             "params": [
-                0, 0, 0, None,  # Empty params
+                0, 0, 0, float('nan'),  # Empty params
                 0, 0, 0                 # Empty params
             ],
             "type": "SimpleItem"
