@@ -1,0 +1,43 @@
+running egg_info
+creating build/idt/idt.egg-info
+writing build/idt/idt.egg-info/PKG-INFO
+writing dependency_links to build/idt/idt.egg-info/dependency_links.txt
+writing entry points to build/idt/idt.egg-info/entry_points.txt
+writing requirements to build/idt/idt.egg-info/requires.txt
+writing top-level names to build/idt/idt.egg-info/top_level.txt
+writing manifest file 'build/idt/idt.egg-info/SOURCES.txt'
+reading manifest file 'build/idt/idt.egg-info/SOURCES.txt'
+writing manifest file 'build/idt/idt.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/vincent/Downloads/course_materials/idt_ros2_nodes/src/idt/build/idt/build
+creating /home/vincent/Downloads/course_materials/idt_ros2_nodes/src/idt/build/idt/build/lib
+creating /home/vincent/Downloads/course_materials/idt_ros2_nodes/src/idt/build/idt/build/lib/idt
+copying idt/__init__.py -> /home/vincent/Downloads/course_materials/idt_ros2_nodes/src/idt/build/idt/build/lib/idt
+copying idt/hello_drone.py -> /home/vincent/Downloads/course_materials/idt_ros2_nodes/src/idt/build/idt/build/lib/idt
+copying idt/get_radio_rssi.py -> /home/vincent/Downloads/course_materials/idt_ros2_nodes/src/idt/build/idt/build/lib/idt
+copying idt/get_global_pos.py -> /home/vincent/Downloads/course_materials/idt_ros2_nodes/src/idt/build/idt/build/lib/idt
+running install
+running install_lib
+creating /home/vincent/Downloads/course_materials/idt_ros2_nodes/src/idt/install/idt/lib/python3.10/site-packages/idt
+copying /home/vincent/Downloads/course_materials/idt_ros2_nodes/src/idt/build/idt/build/lib/idt/__init__.py -> /home/vincent/Downloads/course_materials/idt_ros2_nodes/src/idt/install/idt/lib/python3.10/site-packages/idt
+copying /home/vincent/Downloads/course_materials/idt_ros2_nodes/src/idt/build/idt/build/lib/idt/hello_drone.py -> /home/vincent/Downloads/course_materials/idt_ros2_nodes/src/idt/install/idt/lib/python3.10/site-packages/idt
+copying /home/vincent/Downloads/course_materials/idt_ros2_nodes/src/idt/build/idt/build/lib/idt/get_radio_rssi.py -> /home/vincent/Downloads/course_materials/idt_ros2_nodes/src/idt/install/idt/lib/python3.10/site-packages/idt
+copying /home/vincent/Downloads/course_materials/idt_ros2_nodes/src/idt/build/idt/build/lib/idt/get_global_pos.py -> /home/vincent/Downloads/course_materials/idt_ros2_nodes/src/idt/install/idt/lib/python3.10/site-packages/idt
+byte-compiling /home/vincent/Downloads/course_materials/idt_ros2_nodes/src/idt/install/idt/lib/python3.10/site-packages/idt/__init__.py to __init__.cpython-310.pyc
+byte-compiling /home/vincent/Downloads/course_materials/idt_ros2_nodes/src/idt/install/idt/lib/python3.10/site-packages/idt/hello_drone.py to hello_drone.cpython-310.pyc
+byte-compiling /home/vincent/Downloads/course_materials/idt_ros2_nodes/src/idt/install/idt/lib/python3.10/site-packages/idt/get_radio_rssi.py to get_radio_rssi.cpython-310.pyc
+byte-compiling /home/vincent/Downloads/course_materials/idt_ros2_nodes/src/idt/install/idt/lib/python3.10/site-packages/idt/get_global_pos.py to get_global_pos.cpython-310.pyc
+running install_data
+creating /home/vincent/Downloads/course_materials/idt_ros2_nodes/src/idt/install/idt/share/ament_index
+creating /home/vincent/Downloads/course_materials/idt_ros2_nodes/src/idt/install/idt/share/ament_index/resource_index
+creating /home/vincent/Downloads/course_materials/idt_ros2_nodes/src/idt/install/idt/share/ament_index/resource_index/packages
+copying resource/idt -> /home/vincent/Downloads/course_materials/idt_ros2_nodes/src/idt/install/idt/share/ament_index/resource_index/packages
+copying package.xml -> /home/vincent/Downloads/course_materials/idt_ros2_nodes/src/idt/install/idt/share/idt
+running install_egg_info
+Copying build/idt/idt.egg-info to /home/vincent/Downloads/course_materials/idt_ros2_nodes/src/idt/install/idt/lib/python3.10/site-packages/idt-0.1.0-py3.10.egg-info
+running install_scripts
+Installing get_global_pos script to /home/vincent/Downloads/course_materials/idt_ros2_nodes/src/idt/install/idt/lib/idt
+Installing get_radio_rssi script to /home/vincent/Downloads/course_materials/idt_ros2_nodes/src/idt/install/idt/lib/idt
+Installing hello_drone script to /home/vincent/Downloads/course_materials/idt_ros2_nodes/src/idt/install/idt/lib/idt
+writing list of installed files to '/home/vincent/Downloads/course_materials/idt_ros2_nodes/src/idt/build/idt/install.log'

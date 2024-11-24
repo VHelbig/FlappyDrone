@@ -1,0 +1,45 @@
+[3.528s] Invoking command in '/home/vincent/Downloads/course_materials/idt_ros2_nodes/src/idt': PYTHONPATH=/home/vincent/Downloads/course_materials/idt_ros2_nodes/src/idt/build/idt/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/vincent/Downloads/course_materials/idt_ros2_nodes/src/idt/install/idt/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base build/idt build --build-base /home/vincent/Downloads/course_materials/idt_ros2_nodes/src/idt/build/idt/build install --record /home/vincent/Downloads/course_materials/idt_ros2_nodes/src/idt/build/idt/install.log --single-version-externally-managed install_data
+[3.843s] running egg_info
+[3.843s] creating build/idt/idt.egg-info
+[3.843s] writing build/idt/idt.egg-info/PKG-INFO
+[3.844s] writing dependency_links to build/idt/idt.egg-info/dependency_links.txt
+[3.844s] writing entry points to build/idt/idt.egg-info/entry_points.txt
+[3.844s] writing requirements to build/idt/idt.egg-info/requires.txt
+[3.844s] writing top-level names to build/idt/idt.egg-info/top_level.txt
+[3.844s] writing manifest file 'build/idt/idt.egg-info/SOURCES.txt'
+[3.846s] reading manifest file 'build/idt/idt.egg-info/SOURCES.txt'
+[3.847s] writing manifest file 'build/idt/idt.egg-info/SOURCES.txt'
+[3.847s] running build
+[3.847s] running build_py
+[3.848s] creating /home/vincent/Downloads/course_materials/idt_ros2_nodes/src/idt/build/idt/build
+[3.848s] creating /home/vincent/Downloads/course_materials/idt_ros2_nodes/src/idt/build/idt/build/lib
+[3.848s] creating /home/vincent/Downloads/course_materials/idt_ros2_nodes/src/idt/build/idt/build/lib/idt
+[3.848s] copying idt/__init__.py -> /home/vincent/Downloads/course_materials/idt_ros2_nodes/src/idt/build/idt/build/lib/idt
+[3.848s] copying idt/hello_drone.py -> /home/vincent/Downloads/course_materials/idt_ros2_nodes/src/idt/build/idt/build/lib/idt
+[3.848s] copying idt/get_radio_rssi.py -> /home/vincent/Downloads/course_materials/idt_ros2_nodes/src/idt/build/idt/build/lib/idt
+[3.849s] copying idt/get_global_pos.py -> /home/vincent/Downloads/course_materials/idt_ros2_nodes/src/idt/build/idt/build/lib/idt
+[3.849s] running install
+[3.849s] running install_lib
+[3.850s] creating /home/vincent/Downloads/course_materials/idt_ros2_nodes/src/idt/install/idt/lib/python3.10/site-packages/idt
+[3.850s] copying /home/vincent/Downloads/course_materials/idt_ros2_nodes/src/idt/build/idt/build/lib/idt/__init__.py -> /home/vincent/Downloads/course_materials/idt_ros2_nodes/src/idt/install/idt/lib/python3.10/site-packages/idt
+[3.850s] copying /home/vincent/Downloads/course_materials/idt_ros2_nodes/src/idt/build/idt/build/lib/idt/hello_drone.py -> /home/vincent/Downloads/course_materials/idt_ros2_nodes/src/idt/install/idt/lib/python3.10/site-packages/idt
+[3.850s] copying /home/vincent/Downloads/course_materials/idt_ros2_nodes/src/idt/build/idt/build/lib/idt/get_radio_rssi.py -> /home/vincent/Downloads/course_materials/idt_ros2_nodes/src/idt/install/idt/lib/python3.10/site-packages/idt
+[3.851s] copying /home/vincent/Downloads/course_materials/idt_ros2_nodes/src/idt/build/idt/build/lib/idt/get_global_pos.py -> /home/vincent/Downloads/course_materials/idt_ros2_nodes/src/idt/install/idt/lib/python3.10/site-packages/idt
+[3.851s] byte-compiling /home/vincent/Downloads/course_materials/idt_ros2_nodes/src/idt/install/idt/lib/python3.10/site-packages/idt/__init__.py to __init__.cpython-310.pyc
+[3.852s] byte-compiling /home/vincent/Downloads/course_materials/idt_ros2_nodes/src/idt/install/idt/lib/python3.10/site-packages/idt/hello_drone.py to hello_drone.cpython-310.pyc
+[3.853s] byte-compiling /home/vincent/Downloads/course_materials/idt_ros2_nodes/src/idt/install/idt/lib/python3.10/site-packages/idt/get_radio_rssi.py to get_radio_rssi.cpython-310.pyc
+[3.853s] byte-compiling /home/vincent/Downloads/course_materials/idt_ros2_nodes/src/idt/install/idt/lib/python3.10/site-packages/idt/get_global_pos.py to get_global_pos.cpython-310.pyc
+[3.854s] running install_data
+[3.854s] creating /home/vincent/Downloads/course_materials/idt_ros2_nodes/src/idt/install/idt/share/ament_index
+[3.854s] creating /home/vincent/Downloads/course_materials/idt_ros2_nodes/src/idt/install/idt/share/ament_index/resource_index
+[3.854s] creating /home/vincent/Downloads/course_materials/idt_ros2_nodes/src/idt/install/idt/share/ament_index/resource_index/packages
+[3.854s] copying resource/idt -> /home/vincent/Downloads/course_materials/idt_ros2_nodes/src/idt/install/idt/share/ament_index/resource_index/packages
+[3.854s] copying package.xml -> /home/vincent/Downloads/course_materials/idt_ros2_nodes/src/idt/install/idt/share/idt
+[3.854s] running install_egg_info
+[3.856s] Copying build/idt/idt.egg-info to /home/vincent/Downloads/course_materials/idt_ros2_nodes/src/idt/install/idt/lib/python3.10/site-packages/idt-0.1.0-py3.10.egg-info
+[3.858s] running install_scripts
+[3.884s] Installing get_global_pos script to /home/vincent/Downloads/course_materials/idt_ros2_nodes/src/idt/install/idt/lib/idt
+[3.884s] Installing get_radio_rssi script to /home/vincent/Downloads/course_materials/idt_ros2_nodes/src/idt/install/idt/lib/idt
+[3.884s] Installing hello_drone script to /home/vincent/Downloads/course_materials/idt_ros2_nodes/src/idt/install/idt/lib/idt
+[3.884s] writing list of installed files to '/home/vincent/Downloads/course_materials/idt_ros2_nodes/src/idt/build/idt/install.log'
+[3.918s] Invoked command in '/home/vincent/Downloads/course_materials/idt_ros2_nodes/src/idt' returned '0': PYTHONPATH=/home/vincent/Downloads/course_materials/idt_ros2_nodes/src/idt/build/idt/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/vincent/Downloads/course_materials/idt_ros2_nodes/src/idt/install/idt/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base build/idt build --build-base /home/vincent/Downloads/course_materials/idt_ros2_nodes/src/idt/build/idt/build install --record /home/vincent/Downloads/course_materials/idt_ros2_nodes/src/idt/build/idt/install.log --single-version-externally-managed install_data
