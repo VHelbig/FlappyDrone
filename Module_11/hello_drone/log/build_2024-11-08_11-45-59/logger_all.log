@@ -1,0 +1,127 @@
+[0.158s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[0.158s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=4, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, mixin_files=None, mixin=None, verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0x7a5423451ed0>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7a5423451a20>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7a5423451a20>>, mixin_verb=('build',))
+[0.400s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.400s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.400s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.400s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.400s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.401s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.401s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/vincent/Documents/IDT/hello_drone'
+[0.401s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.401s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.401s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.401s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.401s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.401s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.401s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.401s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.401s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.418s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.418s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.418s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.418s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.419s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.419s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.419s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.419s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.419s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.419s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.419s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.419s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.420s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.420s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.420s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.420s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.420s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.420s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.420s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.420s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.420s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.420s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.420s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.420s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.420s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.421s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.421s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.421s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.421s] Level 1:colcon.colcon_core.package_identification:_identify(src/idt) by extensions ['ignore', 'ignore_ament_install']
+[0.421s] Level 1:colcon.colcon_core.package_identification:_identify(src/idt) by extension 'ignore'
+[0.421s] Level 1:colcon.colcon_core.package_identification:_identify(src/idt) by extension 'ignore_ament_install'
+[0.421s] Level 1:colcon.colcon_core.package_identification:_identify(src/idt) by extensions ['colcon_pkg']
+[0.421s] Level 1:colcon.colcon_core.package_identification:_identify(src/idt) by extension 'colcon_pkg'
+[0.421s] Level 1:colcon.colcon_core.package_identification:_identify(src/idt) by extensions ['colcon_meta']
+[0.421s] Level 1:colcon.colcon_core.package_identification:_identify(src/idt) by extension 'colcon_meta'
+[0.421s] Level 1:colcon.colcon_core.package_identification:_identify(src/idt) by extensions ['ros']
+[0.421s] Level 1:colcon.colcon_core.package_identification:_identify(src/idt) by extension 'ros'
+[0.425s] DEBUG:colcon.colcon_core.package_identification:Package 'src/idt' with type 'ros.ament_python' and name 'idt'
+[0.425s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.425s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.425s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.425s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.425s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.488s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.488s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.491s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 1 installed packages in /home/vincent/Documents/IDT/hello_drone/install
+[0.494s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 277 installed packages in /opt/ros/humble
+[0.496s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.568s] Level 5:colcon.colcon_core.verb:set package 'idt' build argument 'cmake_args' from command line to 'None'
+[0.568s] Level 5:colcon.colcon_core.verb:set package 'idt' build argument 'cmake_target' from command line to 'None'
+[0.568s] Level 5:colcon.colcon_core.verb:set package 'idt' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.568s] Level 5:colcon.colcon_core.verb:set package 'idt' build argument 'cmake_clean_cache' from command line to 'False'
+[0.568s] Level 5:colcon.colcon_core.verb:set package 'idt' build argument 'cmake_clean_first' from command line to 'False'
+[0.568s] Level 5:colcon.colcon_core.verb:set package 'idt' build argument 'cmake_force_configure' from command line to 'False'
+[0.569s] Level 5:colcon.colcon_core.verb:set package 'idt' build argument 'ament_cmake_args' from command line to 'None'
+[0.569s] Level 5:colcon.colcon_core.verb:set package 'idt' build argument 'catkin_cmake_args' from command line to 'None'
+[0.569s] Level 5:colcon.colcon_core.verb:set package 'idt' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.569s] DEBUG:colcon.colcon_core.verb:Building package 'idt' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/vincent/Documents/IDT/hello_drone/build/idt', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/vincent/Documents/IDT/hello_drone/install/idt', 'merge_install': False, 'path': '/home/vincent/Documents/IDT/hello_drone/src/idt', 'symlink_install': False, 'test_result_base': None}
+[0.569s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.571s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.571s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/vincent/Documents/IDT/hello_drone/src/idt' with build type 'ament_python'
+[0.571s] Level 1:colcon.colcon_core.shell:create_environment_hook('idt', 'ament_prefix_path')
+[0.574s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.575s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/vincent/Documents/IDT/hello_drone/install/idt/share/idt/hook/ament_prefix_path.ps1'
+[0.576s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/vincent/Documents/IDT/hello_drone/install/idt/share/idt/hook/ament_prefix_path.dsv'
+[0.577s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/vincent/Documents/IDT/hello_drone/install/idt/share/idt/hook/ament_prefix_path.sh'
+[0.579s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.579s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.080s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/vincent/Documents/IDT/hello_drone/src/idt'
+[1.080s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.080s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.594s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/vincent/Documents/IDT/hello_drone/src/idt': PYTHONPATH=/home/vincent/Documents/IDT/hello_drone/build/idt/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/vincent/Documents/IDT/hello_drone/install/idt/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/idt build --build-base /home/vincent/Documents/IDT/hello_drone/build/idt/build install --record /home/vincent/Documents/IDT/hello_drone/build/idt/install.log --single-version-externally-managed install_data
+[2.184s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/vincent/Documents/IDT/hello_drone/src/idt' returned '0': PYTHONPATH=/home/vincent/Documents/IDT/hello_drone/build/idt/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/vincent/Documents/IDT/hello_drone/install/idt/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/idt build --build-base /home/vincent/Documents/IDT/hello_drone/build/idt/build install --record /home/vincent/Documents/IDT/hello_drone/build/idt/install.log --single-version-externally-managed install_data
+[2.187s] Level 1:colcon.colcon_core.environment:checking '/home/vincent/Documents/IDT/hello_drone/install/idt' for CMake module files
+[2.188s] Level 1:colcon.colcon_core.environment:checking '/home/vincent/Documents/IDT/hello_drone/install/idt' for CMake config files
+[2.189s] Level 1:colcon.colcon_core.environment:checking '/home/vincent/Documents/IDT/hello_drone/install/idt/lib'
+[2.190s] Level 1:colcon.colcon_core.environment:checking '/home/vincent/Documents/IDT/hello_drone/install/idt/bin'
+[2.190s] Level 1:colcon.colcon_core.environment:checking '/home/vincent/Documents/IDT/hello_drone/install/idt/lib/pkgconfig/idt.pc'
+[2.190s] Level 1:colcon.colcon_core.environment:checking '/home/vincent/Documents/IDT/hello_drone/install/idt/lib/python3.10/site-packages'
+[2.190s] Level 1:colcon.colcon_core.shell:create_environment_hook('idt', 'pythonpath')
+[2.191s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/vincent/Documents/IDT/hello_drone/install/idt/share/idt/hook/pythonpath.ps1'
+[2.192s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/vincent/Documents/IDT/hello_drone/install/idt/share/idt/hook/pythonpath.dsv'
+[2.193s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/vincent/Documents/IDT/hello_drone/install/idt/share/idt/hook/pythonpath.sh'
+[2.194s] Level 1:colcon.colcon_core.environment:checking '/home/vincent/Documents/IDT/hello_drone/install/idt/bin'
+[2.194s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(idt)
+[2.195s] INFO:colcon.colcon_core.shell:Creating package script '/home/vincent/Documents/IDT/hello_drone/install/idt/share/idt/package.ps1'
+[2.196s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/vincent/Documents/IDT/hello_drone/install/idt/share/idt/package.dsv'
+[2.197s] INFO:colcon.colcon_core.shell:Creating package script '/home/vincent/Documents/IDT/hello_drone/install/idt/share/idt/package.sh'
+[2.199s] INFO:colcon.colcon_core.shell:Creating package script '/home/vincent/Documents/IDT/hello_drone/install/idt/share/idt/package.bash'
+[2.200s] INFO:colcon.colcon_core.shell:Creating package script '/home/vincent/Documents/IDT/hello_drone/install/idt/share/idt/package.zsh'
+[2.201s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/vincent/Documents/IDT/hello_drone/install/idt/share/colcon-core/packages/idt)
+[2.202s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[2.202s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[2.203s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[2.203s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[2.211s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[2.211s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[2.211s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[2.232s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[2.233s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/vincent/Documents/IDT/hello_drone/install/local_setup.ps1'
+[2.235s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/vincent/Documents/IDT/hello_drone/install/_local_setup_util_ps1.py'
+[2.239s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/vincent/Documents/IDT/hello_drone/install/setup.ps1'
+[2.242s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/vincent/Documents/IDT/hello_drone/install/local_setup.sh'
+[2.244s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/vincent/Documents/IDT/hello_drone/install/_local_setup_util_sh.py'
+[2.245s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/vincent/Documents/IDT/hello_drone/install/setup.sh'
+[2.247s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/vincent/Documents/IDT/hello_drone/install/local_setup.bash'
+[2.248s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/vincent/Documents/IDT/hello_drone/install/setup.bash'
+[2.250s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/vincent/Documents/IDT/hello_drone/install/local_setup.zsh'
+[2.252s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/vincent/Documents/IDT/hello_drone/install/setup.zsh'

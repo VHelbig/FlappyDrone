@@ -1,0 +1,41 @@
+[1.978s] Invoking command in '/home/vincent/Documents/IDT/hello_drone/src/idt': PYTHONPATH=/home/vincent/Documents/IDT/hello_drone/build/idt/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/vincent/Documents/IDT/hello_drone/install/idt/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/idt build --build-base /home/vincent/Documents/IDT/hello_drone/build/idt/build install --record /home/vincent/Documents/IDT/hello_drone/build/idt/install.log --single-version-externally-managed install_data
+[2.275s] running egg_info
+[2.276s] creating ../../build/idt/idt.egg-info
+[2.276s] writing ../../build/idt/idt.egg-info/PKG-INFO
+[2.276s] writing dependency_links to ../../build/idt/idt.egg-info/dependency_links.txt
+[2.276s] writing entry points to ../../build/idt/idt.egg-info/entry_points.txt
+[2.277s] writing requirements to ../../build/idt/idt.egg-info/requires.txt
+[2.277s] writing top-level names to ../../build/idt/idt.egg-info/top_level.txt
+[2.277s] writing manifest file '../../build/idt/idt.egg-info/SOURCES.txt'
+[2.279s] reading manifest file '../../build/idt/idt.egg-info/SOURCES.txt'
+[2.280s] writing manifest file '../../build/idt/idt.egg-info/SOURCES.txt'
+[2.280s] running build
+[2.280s] running build_py
+[2.280s] creating /home/vincent/Documents/IDT/hello_drone/build/idt/build
+[2.280s] creating /home/vincent/Documents/IDT/hello_drone/build/idt/build/lib
+[2.280s] creating /home/vincent/Documents/IDT/hello_drone/build/idt/build/lib/idt
+[2.281s] copying idt/__init__.py -> /home/vincent/Documents/IDT/hello_drone/build/idt/build/lib/idt
+[2.281s] copying idt/hello_drone.py -> /home/vincent/Documents/IDT/hello_drone/build/idt/build/lib/idt
+[2.281s] copying idt/get_global_pos.py -> /home/vincent/Documents/IDT/hello_drone/build/idt/build/lib/idt
+[2.281s] running install
+[2.281s] running install_lib
+[2.282s] creating /home/vincent/Documents/IDT/hello_drone/install/idt/lib/python3.10/site-packages/idt
+[2.282s] copying /home/vincent/Documents/IDT/hello_drone/build/idt/build/lib/idt/__init__.py -> /home/vincent/Documents/IDT/hello_drone/install/idt/lib/python3.10/site-packages/idt
+[2.282s] copying /home/vincent/Documents/IDT/hello_drone/build/idt/build/lib/idt/hello_drone.py -> /home/vincent/Documents/IDT/hello_drone/install/idt/lib/python3.10/site-packages/idt
+[2.282s] copying /home/vincent/Documents/IDT/hello_drone/build/idt/build/lib/idt/get_global_pos.py -> /home/vincent/Documents/IDT/hello_drone/install/idt/lib/python3.10/site-packages/idt
+[2.283s] byte-compiling /home/vincent/Documents/IDT/hello_drone/install/idt/lib/python3.10/site-packages/idt/__init__.py to __init__.cpython-310.pyc
+[2.283s] byte-compiling /home/vincent/Documents/IDT/hello_drone/install/idt/lib/python3.10/site-packages/idt/hello_drone.py to hello_drone.cpython-310.pyc
+[2.284s] byte-compiling /home/vincent/Documents/IDT/hello_drone/install/idt/lib/python3.10/site-packages/idt/get_global_pos.py to get_global_pos.cpython-310.pyc
+[2.285s] running install_data
+[2.285s] creating /home/vincent/Documents/IDT/hello_drone/install/idt/share/ament_index
+[2.285s] creating /home/vincent/Documents/IDT/hello_drone/install/idt/share/ament_index/resource_index
+[2.285s] creating /home/vincent/Documents/IDT/hello_drone/install/idt/share/ament_index/resource_index/packages
+[2.285s] copying resource/idt -> /home/vincent/Documents/IDT/hello_drone/install/idt/share/ament_index/resource_index/packages
+[2.285s] copying package.xml -> /home/vincent/Documents/IDT/hello_drone/install/idt/share/idt
+[2.286s] running install_egg_info
+[2.287s] Copying ../../build/idt/idt.egg-info to /home/vincent/Documents/IDT/hello_drone/install/idt/lib/python3.10/site-packages/idt-0.1.0-py3.10.egg-info
+[2.288s] running install_scripts
+[2.312s] Installing get_global_pos script to /home/vincent/Documents/IDT/hello_drone/install/idt/lib/idt
+[2.312s] Installing hello_drone script to /home/vincent/Documents/IDT/hello_drone/install/idt/lib/idt
+[2.313s] writing list of installed files to '/home/vincent/Documents/IDT/hello_drone/build/idt/install.log'
+[2.353s] Invoked command in '/home/vincent/Documents/IDT/hello_drone/src/idt' returned '0': PYTHONPATH=/home/vincent/Documents/IDT/hello_drone/build/idt/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/vincent/Documents/IDT/hello_drone/install/idt/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/idt build --build-base /home/vincent/Documents/IDT/hello_drone/build/idt/build install --record /home/vincent/Documents/IDT/hello_drone/build/idt/install.log --single-version-externally-managed install_data

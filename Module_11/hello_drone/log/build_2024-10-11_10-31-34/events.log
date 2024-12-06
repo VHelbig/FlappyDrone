@@ -1,0 +1,72 @@
+[0.000000] (-) TimerEvent: {}
+[0.000251] (idt) JobQueued: {'identifier': 'idt', 'dependencies': OrderedDict()}
+[0.000344] (idt) JobStarted: {'identifier': 'idt'}
+[0.098885] (-) TimerEvent: {}
+[0.199204] (-) TimerEvent: {}
+[0.299661] (-) TimerEvent: {}
+[0.400523] (-) TimerEvent: {}
+[0.501602] (-) TimerEvent: {}
+[0.602188] (-) TimerEvent: {}
+[0.702668] (-) TimerEvent: {}
+[0.803325] (-) TimerEvent: {}
+[0.903837] (-) TimerEvent: {}
+[1.004797] (-) TimerEvent: {}
+[1.105649] (-) TimerEvent: {}
+[1.206496] (-) TimerEvent: {}
+[1.307299] (-) TimerEvent: {}
+[1.408051] (-) TimerEvent: {}
+[1.508834] (-) TimerEvent: {}
+[1.609440] (-) TimerEvent: {}
+[1.710096] (-) TimerEvent: {}
+[1.810493] (-) TimerEvent: {}
+[1.911074] (-) TimerEvent: {}
+[1.977624] (idt) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', 'setup.py', 'egg_info', '--egg-base', '../../build/idt', 'build', '--build-base', '/home/vincent/Documents/IDT/hello_drone/build/idt/build', 'install', '--record', '/home/vincent/Documents/IDT/hello_drone/build/idt/install.log', '--single-version-externally-managed', 'install_data'], 'cwd': '/home/vincent/Documents/IDT/hello_drone/src/idt', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'LANGUAGE': 'en_US:en', 'USER': 'vincent', 'XDG_SESSION_TYPE': 'wayland', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib', 'HOME': '/home/vincent', 'DESKTOP_SESSION': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'DBUS_STARTER_BUS_TYPE': 'session', 'SYSTEMD_EXEC_PID': '1207', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus,guid=0c6d7ab3b8ee7a9dcd2360bd6708d21a', 'COLORTERM': 'truecolor', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'ROS_DISTRO': 'humble', 'LOGNAME': 'vincent', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'vincent', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/vincent-ThinkPad-T430:@/tmp/.ICE-unix/1207,unix/vincent-ThinkPad-T430:/tmp/.ICE-unix/1207', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/06d94973_7061_4b72_83d4_8c61e45710bb', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/.mutter-Xwaylandauth.KBPIV2', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'GNOME_TERMINAL_SERVICE': ':1.103', 'SSH_AGENT_LAUNCHER': 'gnome-keyring', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'AMENT_PREFIX_PATH': '/opt/ros/humble', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/vincent/Documents/IDT/hello_drone/build/idt', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'DBUS_STARTER_ADDRESS': 'unix:path=/run/user/1000/bus,guid=0c6d7ab3b8ee7a9dcd2360bd6708d21a', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/vincent/Documents/IDT/hello_drone/build/idt/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/vincent/Documents/IDT/hello_drone/install/idt/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'COLCON': '1', 'VTE_VERSION': '6800'}, 'shell': False}
+[2.011198] (-) TimerEvent: {}
+[2.111539] (-) TimerEvent: {}
+[2.211848] (-) TimerEvent: {}
+[2.275064] (idt) StdoutLine: {'line': b'running egg_info\n'}
+[2.275767] (idt) StdoutLine: {'line': b'creating ../../build/idt/idt.egg-info\n'}
+[2.275975] (idt) StdoutLine: {'line': b'writing ../../build/idt/idt.egg-info/PKG-INFO\n'}
+[2.276331] (idt) StdoutLine: {'line': b'writing dependency_links to ../../build/idt/idt.egg-info/dependency_links.txt\n'}
+[2.276561] (idt) StdoutLine: {'line': b'writing entry points to ../../build/idt/idt.egg-info/entry_points.txt\n'}
+[2.276816] (idt) StdoutLine: {'line': b'writing requirements to ../../build/idt/idt.egg-info/requires.txt\n'}
+[2.276981] (idt) StdoutLine: {'line': b'writing top-level names to ../../build/idt/idt.egg-info/top_level.txt\n'}
+[2.277109] (idt) StdoutLine: {'line': b"writing manifest file '../../build/idt/idt.egg-info/SOURCES.txt'\n"}
+[2.278973] (idt) StdoutLine: {'line': b"reading manifest file '../../build/idt/idt.egg-info/SOURCES.txt'\n"}
+[2.279867] (idt) StdoutLine: {'line': b"writing manifest file '../../build/idt/idt.egg-info/SOURCES.txt'\n"}
+[2.280088] (idt) StdoutLine: {'line': b'running build\n'}
+[2.280249] (idt) StdoutLine: {'line': b'running build_py\n'}
+[2.280428] (idt) StdoutLine: {'line': b'creating /home/vincent/Documents/IDT/hello_drone/build/idt/build\n'}
+[2.280581] (idt) StdoutLine: {'line': b'creating /home/vincent/Documents/IDT/hello_drone/build/idt/build/lib\n'}
+[2.280734] (idt) StdoutLine: {'line': b'creating /home/vincent/Documents/IDT/hello_drone/build/idt/build/lib/idt\n'}
+[2.280883] (idt) StdoutLine: {'line': b'copying idt/__init__.py -> /home/vincent/Documents/IDT/hello_drone/build/idt/build/lib/idt\n'}
+[2.281008] (idt) StdoutLine: {'line': b'copying idt/hello_drone.py -> /home/vincent/Documents/IDT/hello_drone/build/idt/build/lib/idt\n'}
+[2.281153] (idt) StdoutLine: {'line': b'copying idt/get_global_pos.py -> /home/vincent/Documents/IDT/hello_drone/build/idt/build/lib/idt\n'}
+[2.281275] (idt) StdoutLine: {'line': b'running install\n'}
+[2.281438] (idt) StdoutLine: {'line': b'running install_lib\n'}
+[2.282202] (idt) StdoutLine: {'line': b'creating /home/vincent/Documents/IDT/hello_drone/install/idt/lib/python3.10/site-packages/idt\n'}
+[2.282373] (idt) StdoutLine: {'line': b'copying /home/vincent/Documents/IDT/hello_drone/build/idt/build/lib/idt/__init__.py -> /home/vincent/Documents/IDT/hello_drone/install/idt/lib/python3.10/site-packages/idt\n'}
+[2.282524] (idt) StdoutLine: {'line': b'copying /home/vincent/Documents/IDT/hello_drone/build/idt/build/lib/idt/hello_drone.py -> /home/vincent/Documents/IDT/hello_drone/install/idt/lib/python3.10/site-packages/idt\n'}
+[2.282663] (idt) StdoutLine: {'line': b'copying /home/vincent/Documents/IDT/hello_drone/build/idt/build/lib/idt/get_global_pos.py -> /home/vincent/Documents/IDT/hello_drone/install/idt/lib/python3.10/site-packages/idt\n'}
+[2.283223] (idt) StdoutLine: {'line': b'byte-compiling /home/vincent/Documents/IDT/hello_drone/install/idt/lib/python3.10/site-packages/idt/__init__.py to __init__.cpython-310.pyc\n'}
+[2.283495] (idt) StdoutLine: {'line': b'byte-compiling /home/vincent/Documents/IDT/hello_drone/install/idt/lib/python3.10/site-packages/idt/hello_drone.py to hello_drone.cpython-310.pyc\n'}
+[2.284426] (idt) StdoutLine: {'line': b'byte-compiling /home/vincent/Documents/IDT/hello_drone/install/idt/lib/python3.10/site-packages/idt/get_global_pos.py to get_global_pos.cpython-310.pyc\n'}
+[2.284918] (idt) StdoutLine: {'line': b'running install_data\n'}
+[2.285060] (idt) StdoutLine: {'line': b'creating /home/vincent/Documents/IDT/hello_drone/install/idt/share/ament_index\n'}
+[2.285248] (idt) StdoutLine: {'line': b'creating /home/vincent/Documents/IDT/hello_drone/install/idt/share/ament_index/resource_index\n'}
+[2.285381] (idt) StdoutLine: {'line': b'creating /home/vincent/Documents/IDT/hello_drone/install/idt/share/ament_index/resource_index/packages\n'}
+[2.285540] (idt) StdoutLine: {'line': b'copying resource/idt -> /home/vincent/Documents/IDT/hello_drone/install/idt/share/ament_index/resource_index/packages\n'}
+[2.285686] (idt) StdoutLine: {'line': b'copying package.xml -> /home/vincent/Documents/IDT/hello_drone/install/idt/share/idt\n'}
+[2.285809] (idt) StdoutLine: {'line': b'running install_egg_info\n'}
+[2.287672] (idt) StdoutLine: {'line': b'Copying ../../build/idt/idt.egg-info to /home/vincent/Documents/IDT/hello_drone/install/idt/lib/python3.10/site-packages/idt-0.1.0-py3.10.egg-info\n'}
+[2.288730] (idt) StdoutLine: {'line': b'running install_scripts\n'}
+[2.311950] (-) TimerEvent: {}
+[2.312226] (idt) StdoutLine: {'line': b'Installing get_global_pos script to /home/vincent/Documents/IDT/hello_drone/install/idt/lib/idt\n'}
+[2.312468] (idt) StdoutLine: {'line': b'Installing hello_drone script to /home/vincent/Documents/IDT/hello_drone/install/idt/lib/idt\n'}
+[2.312833] (idt) StdoutLine: {'line': b"writing list of installed files to '/home/vincent/Documents/IDT/hello_drone/build/idt/install.log'\n"}
+[2.353279] (idt) CommandEnded: {'returncode': 0}
+[2.412233] (-) TimerEvent: {}
+[2.513142] (-) TimerEvent: {}
+[2.614076] (-) TimerEvent: {}
+[2.687269] (idt) JobEnded: {'identifier': 'idt', 'rc': 0}
+[2.689187] (-) EventReactorShutdown: {}

@@ -1,0 +1,21 @@
+running egg_info
+writing ../../build/idt/idt.egg-info/PKG-INFO
+writing dependency_links to ../../build/idt/idt.egg-info/dependency_links.txt
+writing entry points to ../../build/idt/idt.egg-info/entry_points.txt
+writing requirements to ../../build/idt/idt.egg-info/requires.txt
+writing top-level names to ../../build/idt/idt.egg-info/top_level.txt
+reading manifest file '../../build/idt/idt.egg-info/SOURCES.txt'
+writing manifest file '../../build/idt/idt.egg-info/SOURCES.txt'
+running build
+running build_py
+running install
+running install_lib
+byte-compiling /home/vincent/Documents/IDT/hello_drone/install/idt/lib/python3.10/site-packages/idt/get_global_pos.py to get_global_pos.cpython-310.pyc
+running install_data
+running install_egg_info
+removing '/home/vincent/Documents/IDT/hello_drone/install/idt/lib/python3.10/site-packages/idt-0.1.0-py3.10.egg-info' (and everything under it)
+Copying ../../build/idt/idt.egg-info to /home/vincent/Documents/IDT/hello_drone/install/idt/lib/python3.10/site-packages/idt-0.1.0-py3.10.egg-info
+running install_scripts
+Installing get_global_pos script to /home/vincent/Documents/IDT/hello_drone/install/idt/lib/idt
+Installing hello_drone script to /home/vincent/Documents/IDT/hello_drone/install/idt/lib/idt
+writing list of installed files to '/home/vincent/Documents/IDT/hello_drone/build/idt/install.log'
