@@ -2,7 +2,6 @@ import pandas as pd
 import numpy as np
 from libs.utm import utmconv
 from libs.exportkml import kmlclass
-from scipy.ndimage import convolve
 from enum import Enum
 
 import json
@@ -81,6 +80,15 @@ class PathManagement():
             cleanData.extend(self.currentPath[sections[i][0]:(sections[i][1]+1)])
         self.currentPath=np.array(cleanData)
 
+    def SetToRelativeHeight(self,launchHeight=-1):
+        if self.currentPathState != PathStateEnum.UTMPATH:
+            raise RuntimeError("Can only process UTM paths, convert to utm first")
+        
+        if launchHeight==-1:
+            launchHeight=self.currentPath[0,3]
+        
+        self.currentPath[:,3]=self.currentPath[:,3]-launchHeight
+
     def ExtractDeviationMaxDeviation(self,point1,point2,max_speed):
         diff=point2-point1
         if diff[0]==0: #delta time
@@ -142,7 +150,7 @@ class PathManagement():
             meanAlt=self.currentPath[:,3].mean()
             for i in range(len(self.currentPath)):
                 (lat,long)=uv.utm_to_geodetic(self.hemisphere,self.UTMZone,self.currentPath[i,1],self.currentPath[i,2])
-                latLongPath.append((self.currentPath[i,0],lat,long,meanAlt))#self.currentPath[i,3]))
+                latLongPath.append((self.currentPath[i,0],lat,long,self.currentPath[i,3]))#self.currentPath[i,3]))
             self.currentPath=np.array(latLongPath)
             self.currentPathState=PathStateEnum.LAT_LONG_PATH
         elif self.currentPathState == PathStateEnum.PANDAS_FRAME:
@@ -168,7 +176,7 @@ class PathManagement():
         """
         Export current path as QGC mission plan
         """
-        if self.path_management.currentPathState != PathStateEnum.LAT_LONG_PATH:
+        if self.currentPathState != PathStateEnum.LAT_LONG_PATH:
             raise Exception("Path must be in LAT_LONG_PATH state. Call ConvertToGeodedic() first.")
         
         exporter = QGCRouteExporter(self.currentPath)
@@ -195,7 +203,7 @@ class QGCRouteExporter:
                 holdTime,   # Hold time in seconds
                 1.0,       # Acceptance radius in meters
                 0.0,       # Pass through waypoint
-                float('nan'),  # Desired yaw angle
+                None,  # Desired yaw angle
                 lat,       # Latitude
                 lon,       # Longitude
                 alt        # Altitude
@@ -250,10 +258,10 @@ class QGCRouteExporter:
             "doJumpId": 1,
             "frame": 3,
             "params": [
-                float('nan'),  # Pitch angle
-                float('nan'),  # Empty
-                float('nan'),  # Empty
-                float('nan'),  # Yaw angle
+                None,  # Pitch angle
+                None,  # Empty
+                None,  # Empty
+                None,  # Yaw angle
                 float(self.path[0][1]),  # Latitude
                 float(self.path[0][2]),  # Longitude
                 30.0  # Altitude
@@ -278,9 +286,9 @@ class QGCRouteExporter:
             "autoContinue": True,
             "command": 20,  # MAV_CMD_NAV_RETURN_TO_LAUNCH
             "doJumpId": self.current_item_seq + 1,
-            "frame": 3,
+            "frame": 2,
             "params": [
-                0, 0, 0, float('nan'),  # Empty params
+                0, 0, 0, 0,  # Empty params
                 0, 0, 0                 # Empty params
             ],
             "type": "SimpleItem"

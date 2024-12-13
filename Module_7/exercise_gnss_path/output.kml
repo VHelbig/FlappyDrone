@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+<Document>
+<name>Example</name>
+<description>Example on the use of kmlclass</description>
+<Style id="red">
+  <LineStyle>
+    <color>ff0000ff</color>
+    <width>0.7</width>
+  </LineStyle>
+</Style>
+<Style id="green">
+  <LineStyle>
+    <color>ff00ff00</color>
+    <width>0.7</width>
+  </LineStyle>
+</Style>
+<Style id="blue">
+  <LineStyle>
+    <color>ffff0000</color>
+    <width>0.7</width>
+  </LineStyle>
+</Style>
+<Style id="cyan">
+  <LineStyle>
+    <color>ffffff00</color>
+    <width>0.7</width>
+  </LineStyle>
+</Style>
+<Style id="yellow">
+  <LineStyle>
+    <color>ff00ffff</color>
+    <width>0.7</width>
+  </LineStyle>
+</Style>
+<Style id="grey">
+  <LineStyle>
+    <color>ff888888</color>
+    <width>0.7</width>
+  </LineStyle>
+</Style>
+<Style id="orange">
+  <LineStyle>
+    <color>ff00a5ff</color>
+    <width>0.7</width>
+  </LineStyle>
+</Style>
+<Style id="purple">
+  <LineStyle>
+    <color>ffal20f0</color>
+    <width>0.7</width>
+  </LineStyle>
+</Style>
+<Style id="green_poly">
+  <LineStyle>
+    <color>ff00aa00</color>
+    <width>0.7</width>
+  </LineStyle>
+  <PolyStyle>
+    <color>2000cc00</color>
+  </PolyStyle>
+</Style>
+<Style id="yellow_poly">
+  <LineStyle>
+    <color>ff0000ff</color>
+    <width>0.7</width>
+  </LineStyle>
+  <PolyStyle>
+    <color>2000ffff</color>
+  </PolyStyle>
+</Style>
+<Style id="red_poly">
+  <LineStyle>
+    <color>ff0000ff</color>
+    <width>0.7</width>
+  </LineStyle>
+  <PolyStyle>
+    <color>120000ff</color>
+  </PolyStyle>
+</Style>
+<Style id="orange_poly">
+  <LineStyle>
+    <color>ff00a5ff</color>
+    <width>0.7</width>
+  </LineStyle>
+  <PolyStyle>
+    <color>1200a5ff</color>
+  </PolyStyle>
+</Style>
+<Style id="purple_poly">
+  <LineStyle>
+    <color>ffa020f0</color>
+    <width>0.7</width>
+  </LineStyle>
+  <PolyStyle>
+    <color>10a020f0</color>
+  </PolyStyle>
+</Style>
+<Placemark>
+<name></name>
+<description></description>
+<styleUrl>#red</styleUrl>
+<LineString>
+<altitudeMode>absolute</altitudeMode>
+<coordinates>
+010.32630640,55.47402190,0.4
+010.32631120,55.47402100,0.0
+010.32624850,55.47399280,4.3
+010.32623120,55.47398950,5.6
+010.32614080,55.47386740,6.2
+010.32637680,55.47380770,8.0
+010.32648690,55.47384510,8.0
+010.32632620,55.47389250,8.2
+010.32628340,55.47392620,8.1
+</coordinates>
+</LineString>
+</Placemark>
+</Document>
+</kml>
